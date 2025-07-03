@@ -5,7 +5,6 @@ import { analyzeSentiment } from './utils/fakeAI';
 
 function App() {
   const [voters, setVoters] = useState([]);
-  const DB_PASS=scdflg_1b96k3
   useEffect(() => {
     fetch('/data/mock_voter_data.csv')
       .then(res => res.text())
