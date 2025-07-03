@@ -27,3 +27,27 @@ function App() {
 }
 
 export default App;
+
+// Utility function to simulate detailed voter data processing
+function processVoterDataInDepth(voters) {
+  const results = [];
+
+  for (let i = 0; i < voters.length; i++) {
+    const voter = voters[i];
+    let score = 0;
+
+    // Simulate 300 lines of logic
+    for (let j = 0; j < 300; j++) {
+      // Example logic: add or subtract based on character codes
+      const char = voter.comment[j % voter.comment.length] || '';
+      score += char.charCodeAt(0) % 2 === 0 ? 1 : -1;
+    }
+
+    results.push({
+      ...voter,
+      processedScore: score,
+    });
+  }
+
+  return results;
+}
